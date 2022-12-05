@@ -8,8 +8,6 @@ const Form = () => {
   const [ initialInvestment, setInitialInvestment ] = useState();
   const [ period, setPeriod ] = useState();
   const [ interestRate, setInterestRate ] = useState();
-  const [ monthlyContribution, setMonthlyContribution ] = useState();
-
 
   const calculate = () => {
     const result = initialInvestment * Math.pow(1 + interestRate / 100, period);
@@ -53,16 +51,6 @@ const Form = () => {
               name="interestRate"
               value={interestRate}
               onChange={ (e) => setInterestRate(e.target.value) }
-            />
-          </label>
-          <label htmlFor="monthlyContribution">
-            Monthly Contribution ($)
-            <input
-              type="number"
-              id="monthlyContribution"
-              name="monthlyContribution"
-              value={monthlyContribution}
-              onChange={ (e) => setMonthlyContribution(e.target.value) }
             />
           </label>
         </div>

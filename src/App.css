@@ -30,6 +30,12 @@ input::-webkit-inner-spin-button {
   align-items: center;
 }
 
+@media (max-width: 600px){
+  .form {
+    flex-direction: column;
+  }
+}
+
 .bottom-container {
   display: flex;
   justify-content: space-between;
